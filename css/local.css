@@ -1,5 +1,8 @@
-.header-content .fa-sign-in {
-    vertical-align: bottom;
-    margin-left: 0.5em;
-    margin-right: 0.4em;
+.header-content .login-box {
+    font-style: italic;
+    font-size: 1.3em;
+}
+
+.header-content .login-box img {
+    padding-left: 30px;
 }
