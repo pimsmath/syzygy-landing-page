@@ -74,12 +74,12 @@ aside {
 // Navigation
 
 .navbar-default {
-    background-color: white;
+    background-color: 767474;
     border-color: fade(@theme-dark, 5%);
     .sans-serif-font;
     .transition-all;
     .navbar-header .navbar-brand {
-        color: @theme-primary;
+        color: black;
         .sans-serif-font;
         font-weight: 700;
         text-transform: uppercase;
@@ -116,17 +116,17 @@ aside {
         background-color: transparent;
         border-color: fade(white, 30%);
         .navbar-header .navbar-brand {
-            color: fade(white, 70%);
+            color: fade(black, 70%);
             &:hover,
             &:focus {
-                color: white;
+                color: @theme-primary;
             }
         }
         .nav > li > a,
         .nav > li > a:focus {
-            color: fade(white, 70%);
+            color: fade(black, 70%);
             &:hover {
-                color: white;
+                color: @theme-primary;
             }
         }
         &.affix {
@@ -159,7 +159,6 @@ header {
     min-height: auto;
     .background-cover;
     background-position: center;
-    background-image: url('../img/jupiter-spot.jpg');
     text-align: center;
     color: white;
     .header-content {
