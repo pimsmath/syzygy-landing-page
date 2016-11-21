@@ -19,6 +19,7 @@ logout"
 BRANCHES=`git branch | grep -E '^\*' | cut -d' ' -f 2`
 if [[ $BRANCHES =~ ^ansible$ ]] ; then
     echo "On Branch ansible"
+    gsed -i 's/xxx-host-xxx/{{ ansible_hostname }}/g' _config.yml
     jekyll build
     for asset in $ASSETLIST ; do
         echo $asset
