@@ -7,7 +7,6 @@ _config.yml
 _includes
 _layouts
 _plugins
-_site
 ansible.sh
 css
 font-awesome
