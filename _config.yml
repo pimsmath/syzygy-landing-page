@@ -1,4 +1,4 @@
-title: "xxx-host-xxx Syzygy"
+title: "{{ service_hostname }} Syzygy"
 email: "jupyter@pims.math.ca"
-domain: xxx-host-xxx.syzygy.ca
-url: http://xxx-host-xxx.syzygy.ca
+domain: "{{ ansible_hostname }}.{{ ansible_domain }}"
+url: "http://{{ ansible_hostname }}.{{ ansible_domain }}"
