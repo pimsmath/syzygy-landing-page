@@ -19,6 +19,7 @@ logout"
 BRANCHES=`git branch | grep -E '^\*' | cut -d' ' -f 2`
 if [[ $BRANCHES =~ ^ansible$ ]] ; then
     echo "On Branch ansible"
+    jekyll watch
     for asset in $ASSETLIST ; do
         echo $asset
         rm -rf $asset
