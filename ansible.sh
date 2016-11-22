@@ -28,7 +28,6 @@ if [ $# -ne 0 ] ; then
 fi
 UNIVERSITY=$1
 BRANCHES=`git branch | grep -E '^\*' | cut -d' ' -f 2`
-if [[ $BRANCHES =~ ^ansible$ ]] ; then
     echo "On Branch ansible"
     gsed -i 's/xxx-host-xxx/$UNIVERSITY/g' _config.yml
     jekyll build
@@ -37,7 +36,3 @@ if [[ $BRANCHES =~ ^ansible$ ]] ; then
         rm -rf $asset
     done
     mv _site site
-else
-    echo "Not on ansible branch"
-    exit 1
-fi
