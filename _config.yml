@@ -1,4 +1,6 @@
-title: "xxx-syzygy-host-xxx Syzygy"
+title: "Syzygy.ca"
 email: "jupyter@pims.math.ca"
 domain: xxx-syzygy-host-xxx.syzygy.ca
 url: http://xxx-syzygy-host-xxx.syzygy.ca
+
+relative_permalinks: false

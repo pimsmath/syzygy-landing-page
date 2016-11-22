@@ -33,6 +33,6 @@ BRANCHES=`git branch | grep -E '^\*' | cut -d' ' -f 2`
     jekyll build
     for asset in $ASSETLIST ; do
         echo $asset
-        rm -rf $asset
+#        rm -rf $asset
     done
     mv _site site
