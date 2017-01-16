@@ -1,38 +1,29 @@
 #!/bin/bash
 
-ASSETLIST="CNAME
-LICENSE
-README.md
-_config.yml
-_includes
-_layouts
-_plugins
-css
-font-awesome
-fonts
-img
-index.html
-js
-logout"
+DIR=$(dirname "$0")
 
-Usage() {
-    echo "./0 university"
-    echo ""
-    echo "e.g. ./0 ubc"
-    echo ""
-}
+cd $DIR
 
-if [ $# -ne 0 ] ; then
-    Usage
-    exit 1
+if [[ $(git status -s) ]]
+then
+    echo "The working directory is dirty. Please commit any pending changes."
+    exit 1;
 fi
-UNIVERSITY=$1
-BRANCHES=`git branch | grep -E '^\*' | cut -d' ' -f 2`
-    echo "On Branch ansible"
-    gsed -i 's/xxx-host-xxx/$UNIVERSITY/g' _config.yml
-    jekyll build
-    for asset in $ASSETLIST ; do
-        echo $asset
-#        rm -rf $asset
-    done
-    mv _site site
+
+echo "Deleting old publication"
+rm -rf _site
+mkdir _site
+git worktree prune
+rm -rf .git/worktrees/_site
+
+echo "Checking out gh-pages branch into public"
+git worktree add -B template _site origin/template
+
+echo "Removing existing files"
+rm -rf _site/*
+
+echo "Generating site"
+jekyll build
+
+echo "Updating gh-pages branch"
+cd _site && git add --all && git commit -m "Publishing to template (ansible.sh)"
