@@ -1,21 +1,34 @@
-# Exploring an Syzygy.ca Website
+# Syzygy landing pages
 
+This repository contains the files needed by ansible to create the default
+syzygy.ca landing login/logout pages. There are two important branches:
+master and template.
 
-## Acknowledgement
+## Setup
+`git clone https://github.com/pimsmath/syzygy-landing-page`
 
-This site started from a template shared by [Start Bootstrap](http://startbootstrap.com/) - [Creative](http://startbootstrap.com/template-overviews/creative/).
+## Master Branch
+ALL of your work should be in the master branch. The template branch is the
+result of `jekyll build` and shouldn't be edited directly. For example,
+suppose you wanted to update the login page html. Here is the sequence of
+steps
 
-[Creative](http://startbootstrap.com/template-overviews/creative/) is a one page creative theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
+1. Edit index.html
+ a. Run jekyll build
+ b. Check the contents of _site with `jekyll serve` (or surge)
+2. Commit your changes to master
+3. Push master up to github
+4. Run the publish.sh script
 
-Start Bootstrap was created by and is maintained by **David Miller**, Managing Partner at [Iron Summit Media Strategies](http://www.ironsummitmedia.com/).
+Step 4 hides the management of the template branch. It does something like:
 
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
+1. Remove any existing _site directory
+2. Remove any existing worktree for _site
+3. Add a worktree for the template branch at _site
+4. Run `jekyll build` to refresh _site
+5. Add the new contents of _site to the template branch
+6. Commit the changes to template and push to github
 
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
-
-## Hero Image Credit
-
-Geographical map of global scientific collaboration, computed by Ollivier H. Beauchesne & Scimago Lab, data from Elsevier Scopus.
-
-
+The resulting files in the template branch are not valid HTML because they still
+contain ansible tags like {{ inventory_hostname }}. On the target machine the
+syzygy-html role will clone out the template branch, and evaluate the templates.
