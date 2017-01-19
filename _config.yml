@@ -1,7 +1,7 @@
 title: "{{ syzygy_html_hostname }}"
 domain: "{{ syzygy_html_domain }}"
 email: "{{ syzygy_html_support_email }}"
-url: "http://{{ syzygy_html_domain }}"
+url: "{{ syzygy_html_url }}"
 longname: "{{ syzygy_html_longname }}"
 
 relative_permalinks: false
