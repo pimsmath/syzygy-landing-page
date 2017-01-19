@@ -8,7 +8,7 @@
     <meta name="description" content="syzygy.ca -- an interactive collaborative computing environment for researchers in Canada.">
     <meta name="author" content="James Colliander">
 
-    <title>xxx-syzygy-host-xxx.syzygy.ca</title>
+    <title>{{ syzygy_html_domain }}</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
@@ -45,7 +45,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="http://xxx-syzygy-host-xxx.syzygy.ca">xxx-syzygy-host-xxx.syzygy.ca</a>
+            <a class="navbar-brand page-scroll" href="http://{{ syzygy_html_domain }}">{{ syzygy_html_hostname }}</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -58,7 +58,7 @@
                     <a class="page-scroll" href="#partners">Partners</a>
                 </li>
                 <li>
-                <a href="http://xxx-syzygy-host-xxx.syzygy.ca/jupyter/hub"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign-in</a>
+                <a href="http://{{ syzygy_html_domain }}/jupyter/hub"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign-in</a>
                 </li>
             </ul>
         </div>
@@ -81,7 +81,7 @@
         <div class="col-lg-8 col-lg-offset-2 text-center">
           <div class="login-box">
             Left too soon? 
-          <a href="http://xxx-syzygy-host-xxx.syzygy.ca/jupyter/hub" >
+          <a href="http://{{ syzygy_html_domain }}/jupyter/hub" >
               <img src="/img/login.png" alt="click to sign in with university account" class="wow zoomIn"></a>
           </div>
         </div>
