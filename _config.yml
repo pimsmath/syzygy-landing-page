@@ -1,7 +1,7 @@
-title: "xxx-syzygy-host-xxx.syzygy.ca"
-email: "jupyter@pims.math.ca"
-domain: xxx-syzygy-host-xxx.syzygy.ca
-url: http://xxx-syzygy-host-xxx.syzygy.ca
+title: "{{ syzygy_html_hostname }}"
+email: "{{ syzygy_html_support_email }}"
+domain: "{{ syzygy_html_domain }}"
+url: "http://{{ syzygy_html_domain }}"
 
 relative_permalinks: false
 
