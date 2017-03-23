@@ -6,3 +6,7 @@
 .header-content .login-box img {
     margin-bottom: 1.5em;
 }
+
+section#terms a {
+    color: #eb3812;
+}
