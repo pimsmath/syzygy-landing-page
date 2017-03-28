@@ -3,6 +3,7 @@ domain: "{{ syzygy_html_domain }}"
 email: "{{ syzygy_html_support_email }}"
 url: "{{ syzygy_html_url }}"
 longname: "{{ syzygy_html_longname }}"
+terms: "{{ syzygy_html_terms }}"
 
 relative_permalinks: false
 
