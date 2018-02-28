@@ -7,6 +7,12 @@
     margin-bottom: 1.5em;
 }
 
-section#terms a {
+section#about a, section#terms a {
     color: #eb3812;
+}
+
+section#partners img#cybera {
+    width: 300px;
+    height: 100px;
+    margin-top: 40px;
 }
