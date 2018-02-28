@@ -1,17 +1,14 @@
-# Syzygy landing pages
+# Callysto landing pages
 
 This repository contains the files needed by ansible to create the default
-syzygy.ca landing login/logout pages. There are two important branches:
-master and template.
+callysto.ca landing login/logout pages. There are two important branches:
+master-callysto and template-callysto.
 
-## Setup
-`git clone https://github.com/pimsmath/syzygy-landing-page`
-
-## Master Branch
-ALL of your work should be in the master branch. The template branch is the
-result of `jekyll build` and shouldn't be edited directly. For example,
-suppose you wanted to update the login page html. Here is the sequence of
-steps
+## Master-callysto Branch
+ALL of your work should be in the master-callysto branch. The template-callysto
+branch is the result of `jekyll build` and shouldn't be edited directly. For
+example, suppose you wanted to update the login page html. Here is the sequence
+of steps
 
 1. Edit index.html
  a. Run jekyll build

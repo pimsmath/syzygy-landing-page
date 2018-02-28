@@ -1,9 +1,9 @@
-title: "{{ syzygy_html_hostname }}"
-domain: "{{ syzygy_html_domain }}"
-email: "{{ syzygy_html_support_email }}"
-url: "{{ syzygy_html_url }}"
-longname: "{{ syzygy_html_longname }}"
-terms: "{{ syzygy_html_terms }}"
+title: "{{ callysto_html_hostname }}"
+domain: "{{ callysto_html_domain }}"
+email: "{{ callysto_html_support_email }}"
+url: "{{ callysto_html_url }}"
+longname: "{{ callysto_html_longname }}"
+terms: "{{ callysto_html_terms }}"
 
 relative_permalinks: false
 
