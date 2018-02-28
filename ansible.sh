@@ -25,5 +25,5 @@ rm -rf _site/*
 echo "Generating site"
 jekyll build
 
-echo "Updating gh-pages branch"
+echo "Updating template-callysto branch"
 cd _site && git add --all && git commit -m "Publishing to template (ansible.sh)" && git push
