@@ -1,0 +1,7 @@
+# Title of your site
+title = "test.syzygy.ca"
+
+# The URL of your site. End it with a slash: "/"
+baseurl = "/"
+
+copyright = "&copy; 2020 Pacific Institute for the Mathematical Sciences"
