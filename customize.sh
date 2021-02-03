@@ -16,14 +16,17 @@ for file in ${FILES[@]}; do
         echo "Unable to find ${file}"
         exit 1
     fi
-    sed "s/XXXSITENAME/${SITENAME}/g" $file
+    sed -i "s/XXXSITENAME/${SITENAME}/g" $file
     if [ $? -ne 0 ] ; then
         echo "Unable to process SITENAME for find ${file}"
         exit 1
     fi
-    sed "s/XXXUNIVNAME/${UNIVNAME}/g" $file
+    sed -i "s/XXXUNIVNAME/${UNIVNAME}/g" $file
     if [ $? -ne 0 ] ; then
         echo "Unable to process UNIVNAME for find ${file}"
         exit 1
     fi
 done
+if [ -f $0 ] ; then
+    rm -f $0
+fi
