@@ -1,0 +1,28 @@
+name: Build branch
+
+on:
+  push:
+    branches:
+      - hugo
+
+jobs:
+  deploy:
+    runs-in: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Read .env
+        id: hugo-version
+        run: |
+          echo "::set-output name=HUGO_VERSION::${HUGO_VERSION}"
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo_version: '${{ steps.hugo-version.outputs.HUGO_VERSION }}'
+
+      - name: Build
+        run: hugo --minify
