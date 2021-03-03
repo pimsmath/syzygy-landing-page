@@ -1,0 +1,37 @@
+baseURL = "http://{{ syzygy_html_hostname }}/"
+languageCode = "en-us"
+title = "{{ syzygy_html_hostname }}"
+theme = ["github.com/pimsmath/gohugo-theme-syzygy-callysto"]
+
+[params]
+  hub_url = "/jupyter/hub"
+  signin_text = "Sign in with your account"
+  logo = "/images/jupyter-logo.svg"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "about"
+    url = "#about"
+    weight = "10"
+
+  [[menu.main]]
+    identifier = "intro"
+    name = "intro"
+    post = " <i class='fa fa-external-link-alt'></i>"
+    url = "https://intro.syzygy.ca"
+    weight = "20"
+  
+  [[menu.main]]
+    identifier = "partners"
+    name = "partners"
+    post = " <i class='fas fa-external-link-alt'></i>"
+    url = "#partners"
+    weight = "30"
+  
+  [[menu.main]]
+    identifier = "sign-in"
+    name = "sign-in"
+    pre = "<i class='fas fa-sign-in-alt'></i>"
+    url = "/jupyter/hub"
+    weight = "100"
