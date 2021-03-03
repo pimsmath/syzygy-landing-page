@@ -9,10 +9,6 @@ weight = 20
   text_color_light = true
 
 [[item]]
-  fa = "fa-info-circle"
-  description = "[Callysto website](https://callysto.ca)"
-
-[[item]]
   fa = "fa-book"
   description = "Interactive computing notebooks"
 
