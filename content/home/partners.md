@@ -18,8 +18,8 @@ subtitle = "<hr>"
   weight = 20
 
 [[item]]
-  logo = "/images/computecanada-logo.png"
-  alt_text = "Compute Canada"
-  url = "https://www.computecanada.ca/"
+  logo = "/images/alliancecan.svg"
+  alt_text = "Digital Research Alliance of Canada"
+  url = "https://alliancecan.ca"
   weight = 10
 +++

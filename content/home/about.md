@@ -22,7 +22,7 @@ weight = 20
 
 [[item]]
   fa = "fa-cogs"
-  description = "Hosted by Compute Canada"
+  description = "Hosted by the Digital Research Alliance of Canada"
 
 [[item]]
   fa = "fa-university"
